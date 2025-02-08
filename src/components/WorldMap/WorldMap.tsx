@@ -4,7 +4,7 @@ import "./styles.css";
 
 export default function WorldMap() {
   return (
-    <div className="р-4">
+    <div className="">
       <ComposableMap
         width={450}
         height={200}
