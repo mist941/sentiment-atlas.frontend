@@ -1,3 +1,9 @@
+import WorldMap from "@/components/WorldMap/WorldMap";
+
 export default function Home() {
-  return <div>Content</div>;
+  return (
+    <div>
+      <WorldMap />
+    </div>
+  );
 }

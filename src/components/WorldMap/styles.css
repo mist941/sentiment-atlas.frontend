@@ -1,0 +1,11 @@
+.geography {
+  cursor: pointer;
+}
+
+.geography:focus {
+  outline: none;
+}
+
+.geography:active {
+  outline: none;
+}
