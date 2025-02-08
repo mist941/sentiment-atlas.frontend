@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <div className="grid grid-rows-[60px_1fr_40px] items-center justify-items-center min-h-screen gap-5 font-[family-name:var(--font-geist-sans)]">
           <Header />
-          <main className="w-full">{children}</main>
+          <main className="w-full h-full">{children}</main>
           <Footer />
         </div>
         <SpeedInsights />
