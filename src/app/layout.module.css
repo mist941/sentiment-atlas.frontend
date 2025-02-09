@@ -1,7 +1,8 @@
 .layout {
   display: grid;
-  grid-template-rows: 65px 1fr 40px;
+  grid-template-rows: 65px 1fr 32px;
   align-items: center;
   justify-items: center;
   min-height: 100svh;
+  gap: 12px;
 }
