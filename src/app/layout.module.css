@@ -6,3 +6,7 @@
   min-height: 100svh;
   gap: 12px;
 }
+
+.container {
+  display: flex;
+}

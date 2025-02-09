@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={`${geist.variable}`}>
         <div className={styles.layout}>
           <Header />
-          <main className={styles.main}>{children}</main>
+          {children}
           <Footer />
         </div>
         <SpeedInsights />

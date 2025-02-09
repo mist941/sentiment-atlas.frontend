@@ -1,5 +1,8 @@
 .geography {
   cursor: pointer;
+  stroke: var(--background);
+  stroke-width: 0.1px;
+  fill: #06f;
 }
 
 .geography:focus {
