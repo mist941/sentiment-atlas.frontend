@@ -1,0 +1,16 @@
+.themeToggler {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  border: unset;
+  background-color: var(--grey300);
+  color: var(--foreground);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,6 +1,7 @@
 "use client";
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
+import styles from "./ThemeToggler.module.css";
 
 export default function ThemeToggler() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
@@ -25,10 +26,7 @@ export default function ThemeToggler() {
   };
 
   return (
-    <button
-      onClick={toggleTheme}
-      className=""
-    >
+    <button onClick={toggleTheme} className={styles.themeToggler}>
       {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
     </button>
   );
