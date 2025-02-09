@@ -33,13 +33,17 @@ export default function WorldMap() {
       >
         <Geographies geography="features.json">
           {({ geographies }) =>
-            geographies.map((geo) => (
-              <Geography
-                key={geo.rsmKey}
-                className={styles.geography}
-                geography={geo}
-              />
-            ))
+            geographies.map((geo) => {
+              return (
+                <Geography
+                  key={geo.rsmKey}
+                  className={styles.geography}
+                  geography={geo}
+                  data-country-code={geo.id}
+                  data-country-name={geo.properties.name}
+                />
+              );
+            })
           }
         </Geographies>
       </ZoomableGroup>
