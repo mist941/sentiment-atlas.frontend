@@ -7,13 +7,25 @@ import {
 } from "react-simple-maps";
 import styles from "./WorldMap.module.css";
 import { useState } from "react";
-import { MapPosition } from "@/types/map";
+import { CountryData, MapPosition } from "@/types/map";
+import { parseCountriesData } from "@/helpers/parseCountriesData";
+import { getHSLMoodColor } from "@/helpers/getHSLModColor";
 
-export default function WorldMap() {
+interface WorldMapProps {
+  data: CountryData[];
+}
+
+export default function WorldMap({ data = [] }: WorldMapProps) {
   const [position, setPosition] = useState<MapPosition>({
     coordinates: [0, 0],
     zoom: 1,
   });
+
+  const countriesData = parseCountriesData(data);
+
+  const moods = data.map((c) => parseFloat(c.average_sentiment));
+  const minMood = Math.min(...moods);
+  const maxMood = Math.max(...moods);
 
   const handleMoveEnd = (position: MapPosition) => {
     setPosition(position);
@@ -41,6 +53,11 @@ export default function WorldMap() {
                   geography={geo}
                   data-country-code={geo.id}
                   data-country-name={geo.properties.name}
+                  fill={getHSLMoodColor(
+                    countriesData[geo.id],
+                    minMood,
+                    maxMood
+                  )}
                 />
               );
             })
