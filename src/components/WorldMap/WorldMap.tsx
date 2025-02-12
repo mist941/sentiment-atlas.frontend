@@ -35,7 +35,7 @@ export default function WorldMap({ data = [] }: WorldMapProps) {
     <div className={styles.mapContainer}>
       <ComposableMap
         projection="geoEqualEarth"
-        projectionConfig={{ scale: 150, rotate: [-10, 0, 0] }}
+        projectionConfig={{ scale: 230, rotate: [-10, 0, 0] }}
       >
         <ZoomableGroup
           zoom={position.zoom}
