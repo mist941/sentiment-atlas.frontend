@@ -32,38 +32,38 @@ export default function WorldMap({ data = [] }: WorldMapProps) {
   };
 
   return (
-    <ComposableMap
-      width={450}
-      height={200}
-      projection="geoEqualEarth"
-      projectionConfig={{ scale: 75, rotate: [-10, 0, 0] }}
-    >
-      <ZoomableGroup
-        zoom={position.zoom}
-        center={position.coordinates}
-        onMoveEnd={handleMoveEnd}
+    <div className={styles.mapContainer}>
+      <ComposableMap
+        projection="geoEqualEarth"
+        projectionConfig={{ scale: 150, rotate: [-10, 0, 0] }}
       >
-        <Geographies geography="features.json">
-          {({ geographies }) =>
-            geographies.map((geo) => {
-              return (
-                <Geography
-                  key={geo.rsmKey}
-                  className={styles.geography}
-                  geography={geo}
-                  data-country-code={geo.id}
-                  data-country-name={geo.properties.name}
-                  fill={getHSLMoodColor(
-                    countriesData[geo.id],
-                    minMood,
-                    maxMood
-                  )}
-                />
-              );
-            })
-          }
-        </Geographies>
-      </ZoomableGroup>
-    </ComposableMap>
+        <ZoomableGroup
+          zoom={position.zoom}
+          center={position.coordinates}
+          onMoveEnd={handleMoveEnd}
+        >
+          <Geographies geography="features.json">
+            {({ geographies }) =>
+              geographies.map((geo) => {
+                return (
+                  <Geography
+                    key={geo.rsmKey}
+                    className={styles.geography}
+                    geography={geo}
+                    data-country-code={geo.id}
+                    data-country-name={geo.properties.name}
+                    fill={getHSLMoodColor(
+                      countriesData[geo.id],
+                      minMood,
+                      maxMood
+                    )}
+                  />
+                );
+              })
+            }
+          </Geographies>
+        </ZoomableGroup>
+      </ComposableMap>
+    </div>
   );
 }
