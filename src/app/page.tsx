@@ -1,7 +1,7 @@
 import WorldMap from "@/components/WorldMap/WorldMap";
 import styles from "./page.module.css";
 import { CountryData } from "@/types/map";
-import ColorSuggestion from "@/components/ColorSuggestion/ColorSuggestion";
+import MapSuggestion from "@/components/MapSuggestion/MapSuggestion";
 
 export default async function Home() {
   const res = await fetch(
@@ -16,7 +16,7 @@ export default async function Home() {
   return (
     <main className={styles.container}>
       <WorldMap data={data} />
-      <ColorSuggestion />
+      <MapSuggestion />
     </main>
   );
 }

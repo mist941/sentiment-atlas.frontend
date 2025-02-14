@@ -1,18 +1,31 @@
 .suggestionWrapper {
-  padding: 1.5px;
   position: absolute;
   bottom: 10px;
   left: 20px;
-  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.suggestion {
+.suggestionLineWrapper {
+  padding: 2px;
+  background-color: var(--background);
+  border-radius: 3;
+}
+
+.suggestionLine {
   width: 300px;
   height: 20px;
+  border-radius: inherit;
   background: linear-gradient(
     90deg,
     hsl(0, 60%, 50%) 0%,
     hsl(60, 60%, 50%) 50%,
     hsl(120, 60%, 50%) 100%
   );
+}
+
+.scaleRange {
+  display: flex;
+  justify-content: space-between;
 }
