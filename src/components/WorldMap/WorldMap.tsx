@@ -6,7 +6,7 @@ import {
   ZoomableGroup,
 } from "react-simple-maps";
 import styles from "./WorldMap.module.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { CountryData, MapPosition } from "@/types/map";
 import { parseCountriesData } from "@/helpers/parseCountriesData";
 import { getHSLMoodColor } from "@/helpers/getHSLModColor";
@@ -16,6 +16,7 @@ interface WorldMapProps {
 }
 
 export default function WorldMap({ data = [] }: WorldMapProps) {
+  const tooltipRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState<MapPosition>({
     coordinates: [0, 0],
     zoom: 1,
@@ -64,6 +65,7 @@ export default function WorldMap({ data = [] }: WorldMapProps) {
           </Geographies>
         </ZoomableGroup>
       </ComposableMap>
+      <div ref={tooltipRef} />
     </div>
   );
 }

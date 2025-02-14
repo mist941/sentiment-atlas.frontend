@@ -16,12 +16,12 @@
   cursor: pointer;
   stroke: var(--background);
   stroke-width: 0.1px;
-}
-
-.geography:focus {
-  outline: none;
-}
-
-.geography:active {
-  outline: none;
+  transition: opacity 0.3s ease-in-out;
+  &:hover {
+    opacity: 0.5;
+  }
+  &:focus,
+  &:active {
+    outline: none;
+  }
 }
