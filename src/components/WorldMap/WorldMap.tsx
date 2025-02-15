@@ -24,10 +24,6 @@ export default function WorldMap({ data = [] }: WorldMapProps) {
 
   const countriesData = parseCountriesData(data);
 
-  const moods = data.map((c) => parseFloat(c.average_sentiment));
-  const minMood = Math.min(...moods);
-  const maxMood = Math.max(...moods);
-
   const handleMoveEnd = (position: MapPosition) => {
     setPosition(position);
   };
@@ -53,11 +49,7 @@ export default function WorldMap({ data = [] }: WorldMapProps) {
                     geography={geo}
                     data-country-code={geo.id}
                     data-country-name={geo.properties.name}
-                    fill={getHSLMoodColor(
-                      countriesData[geo.id],
-                      minMood,
-                      maxMood
-                    )}
+                    fill={getHSLMoodColor(countriesData[geo.id], -1, 1)}
                   />
                 );
               })
