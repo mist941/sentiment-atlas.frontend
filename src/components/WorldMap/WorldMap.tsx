@@ -10,13 +10,17 @@ import { useRef, useState } from "react";
 import { CountryData, MapPosition } from "@/types/map";
 import { parseCountriesData } from "@/helpers/parseCountriesData";
 import { getHSLMoodColor } from "@/helpers/getHSLModColor";
+import useCountryTooltip from "@/hooks/useCountryTooltip";
 
 interface WorldMapProps {
   data: CountryData[];
 }
 
+const SENTIMENT_MODIFIER = 100;
+
 export default function WorldMap({ data = [] }: WorldMapProps) {
   const tooltipRef = useRef<HTMLDivElement>(null);
+  const showTooltip = useCountryTooltip(tooltipRef);
   const [position, setPosition] = useState<MapPosition>({
     coordinates: [0, 0],
     zoom: 1,
@@ -47,8 +51,17 @@ export default function WorldMap({ data = [] }: WorldMapProps) {
                     key={geo.rsmKey}
                     className={styles.geography}
                     geography={geo}
-                    data-country-code={geo.id}
-                    data-country-name={geo.properties.name}
+                    onMouseMove={(e) =>
+                      showTooltip(
+                        e,
+                        geo.properties.name,
+                        Number(
+                          (countriesData[geo.id] * SENTIMENT_MODIFIER).toFixed(
+                            2
+                          )
+                        )
+                      )
+                    }
                     fill={getHSLMoodColor(countriesData[geo.id], -1, 1)}
                   />
                 );
@@ -57,7 +70,7 @@ export default function WorldMap({ data = [] }: WorldMapProps) {
           </Geographies>
         </ZoomableGroup>
       </ComposableMap>
-      <div ref={tooltipRef} />
+      <div className={styles.tooltip} ref={tooltipRef} />
     </div>
   );
 }

@@ -25,3 +25,12 @@
     outline: none;
   }
 }
+
+.tooltip {
+  visibility: hidden;
+  position: fixed;
+  cursor: pointer;
+  background-color: var(--background);
+  padding: 4px;
+  border-radius: 4px;
+}
