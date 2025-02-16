@@ -19,7 +19,7 @@ Sentiment Atlas is an interactive platform for visualizing sentiment trends acro
 
 ## 📦 Installation
 
-1. **Clone the repository**
+1. **Clone the repository**  
    `git clone https://github.com/your-repo/sentiment-atlas-frontend.git`  
    `cd sentiment-atlas-frontend`
 
