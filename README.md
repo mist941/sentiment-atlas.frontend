@@ -20,22 +20,22 @@ Sentiment Atlas is an interactive platform for visualizing sentiment trends acro
 ## 📦 Installation
 
 1. **Clone the repository**
-   `git clone https://github.com/your-repo/sentiment-atlas-frontend.git` \n
+   `git clone https://github.com/your-repo/sentiment-atlas-frontend.git`  
    `cd sentiment-atlas-frontend`
 
-2. **Install dependencies**
+2. **Install dependencies**  
    `npm install`
 
-3. **Run in development mode**
+3. **Run in development mode**  
    `npm run dev`
 
-4. **Build for production**
-   `npm run build` \n
+4. **Build for production**  
+   `npm run build`  
    `npm run start`
 
 ## 🔬 Testing
 
-Run unit tests using: \n
+Run unit tests using:  
 `npm run test`
 
 ⭐ If you like this project, don't forget to give it a star on GitHub!
