@@ -34,9 +34,8 @@ Sentiment Atlas is an interactive platform for visualizing sentiment trends acro
    `npm run dev`
 
 4. **Build for production**
-   ```npm run build
-      npm run start
-   ```
+   `npm run build`
+   `npm run start`
 
 ## 🚀 Project Structure
 
