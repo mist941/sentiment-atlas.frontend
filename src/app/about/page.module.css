@@ -1,0 +1,30 @@
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.group {
+  text-align: left;
+  max-width: 800px;
+  width: 100%;
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 18px;
+}
+
+.link {
+  color: rgb(96 165 250);
+  font-weight: 500;
+}
