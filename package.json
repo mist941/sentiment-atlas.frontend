@@ -15,8 +15,13 @@
     "**/*.{json,md,css,scss}": "prettier --write"
   },
   "jest": {
+    "preset": "ts-jest",
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    },
     "testEnvironment": "jsdom",
     "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1",
       "\\.(css|less|scss|sass)$": "identity-obj-proxy"
     }
   },
@@ -50,6 +55,7 @@
     "lint-staged": "^15.4.3",
     "postcss": "^8",
     "prettier": "^3.4.2",
+    "ts-jest": "^29.2.5",
     "typescript": "^5"
   }
 }
