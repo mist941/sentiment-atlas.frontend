@@ -5,10 +5,10 @@ Sentiment Atlas is an interactive platform for visualizing sentiment trends acro
 ## 🔧 Tech Stack
 
 - **Next.js** – Rendering & routing
+- **React Simple Map** – Map visualization
 - **TypeScript** – Static typing
 - **ESLint + Prettier** – Code linting & formatting
-- **ESLint + Prettier** – Code linting & formatting
-- **husky** - Pre-commit & pre-push
+- **Husky** - Pre-commit & pre-push
 - **Testing library + jest** - Unit testing
 
 ## 🚀 Features
