@@ -20,3 +20,12 @@
   color: rgb(96 165 250);
   font-weight: 500;
 }
+
+@media (width < 768px) {
+  .footer {
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 20px;
+  }
+}

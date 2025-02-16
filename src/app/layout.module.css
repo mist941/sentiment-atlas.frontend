@@ -10,3 +10,9 @@
 .container {
   display: flex;
 }
+
+@media (width < 768px) {
+  .layout {
+    grid-template-rows: 65px 1fr 55px;
+  }
+}

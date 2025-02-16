@@ -43,7 +43,7 @@ export default function About() {
             <b>Backend:</b> Python, AWS Lambda.
           </li>
           <li>
-            <b>Data Processing:</b> vaderSentiment.
+            <b>Data Processing:</b> VADER Sentiment Analysis.
           </li>
           <li>
             <b>APIs:</b> Reddit API for data collection.
