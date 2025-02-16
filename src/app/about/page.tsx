@@ -8,10 +8,10 @@ export default function About() {
       <section className={styles.group}>
         <h2 className={styles.title}>Project Purpose</h2>
         <p>
-          The goal of Sentiment Atlas is to provide a visual and data-driven
-          representation of public sentiment across different countries. The
-          project was born out of the need for a better understanding of global
-          opinions and discussions on social platforms.
+          The goal of Sentiment Atlas is to provide a visual representation of
+          public sentiment across different countries. The project was born out
+          of the need for a better understanding of global opinions on social
+          platforms.
         </p>
       </section>
       <section className={styles.group}>
@@ -28,9 +28,8 @@ export default function About() {
             overall sentiment (positive, neutral, or negative).
           </li>
           <li>
-            <b>Data Visualization</b> - The results are displayed on an
-            interactive map, where users can click on different countries to
-            explore sentiment trends in detail.
+            <b>Data Visualization</b> - The results are displayed on a map,
+            where users can explore sentiment by each country.
           </li>
         </ol>
       </section>
