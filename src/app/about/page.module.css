@@ -12,9 +12,10 @@
   text-align: left;
   max-width: 800px;
   width: 100%;
-  h2 {
-    margin-bottom: 10px;
-  }
+}
+
+.title {
+  margin-bottom: 10px;
 }
 
 .list {

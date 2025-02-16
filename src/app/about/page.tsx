@@ -6,7 +6,7 @@ export default function About() {
     <main className={styles.container}>
       <h1>About Sentiment Atlas</h1>
       <section className={styles.group}>
-        <h2>Project Purpose</h2>
+        <h2 className={styles.title}>Project Purpose</h2>
         <p>
           The goal of Sentiment Atlas is to provide a visual and data-driven
           representation of public sentiment across different countries. The
@@ -15,7 +15,7 @@ export default function About() {
         </p>
       </section>
       <section className={styles.group}>
-        <h2>How It Works</h2>
+        <h2 className={styles.title}>How It Works</h2>
         <ol className={styles.list}>
           <li>
             <b>Data Collection</b> - Sentiment Atlas fetches real-time and
@@ -35,7 +35,7 @@ export default function About() {
         </ol>
       </section>
       <section className={styles.group}>
-        <h2>Technologies Used</h2>
+        <h2 className={styles.title}>Technologies Used</h2>
         <ul className={styles.list}>
           <li>
             <b>Frontend:</b> Next.js, TypeScript.
@@ -56,7 +56,7 @@ export default function About() {
         </ul>
       </section>
       <section className={styles.group}>
-        <h2>Author</h2>
+        <h2 className={styles.title}>Author</h2>
         <ul className={styles.list}>
           <li>
             <b>GitHub:</b>{" "}
