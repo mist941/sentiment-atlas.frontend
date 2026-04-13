@@ -8,7 +8,7 @@ RUN npm prune --production
 
 FROM node:24-slim
 WORKDIR /app
-COPY --from=frontend-builder /app/.next/standalone ./build
+COPY --from=frontend-builder /app/.next/standalone ./app
 
 EXPOSE 3000
 
